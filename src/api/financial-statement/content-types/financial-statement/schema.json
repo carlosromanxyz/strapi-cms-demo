@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "financial_statements",
+  "info": {
+    "singularName": "financial-statement",
+    "pluralName": "financial-statements",
+    "displayName": "Financial Statement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "statementName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
