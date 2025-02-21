@@ -1,0 +1,8 @@
+{
+  "version": "v1",
+  "packages": {
+    "strapi-plugin-logz": {
+      "signature": "89833df7e0ccbdf00779721d97a4eeb9"
+    }
+  }
+}
