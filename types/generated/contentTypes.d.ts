@@ -749,9 +749,10 @@ export interface PluginUploadFolder extends Struct.CollectionTypeSchema {
 
 export interface PluginUserActionsLoggerRecord
   extends Struct.CollectionTypeSchema {
-  collectionName: 'records';
+  collectionName: 'record';
   info: {
-    displayName: 'Records';
+    description: 'The record collection';
+    displayName: 'Record';
     pluralName: 'records';
     singularName: 'record';
   };
@@ -768,22 +769,24 @@ export interface PluginUserActionsLoggerRecord
     };
   };
   attributes: {
-    action: Schema.Attribute.String;
+    action: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    ip: Schema.Attribute.String;
+    data: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::user-actions-logger.record'
     > &
       Schema.Attribute.Private;
+    method: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    timestamp: Schema.Attribute.Timestamp;
+    statusCode: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    url: Schema.Attribute.Text;
     user: Schema.Attribute.Relation<
       'oneToOne',
       'plugin::users-permissions.user'
