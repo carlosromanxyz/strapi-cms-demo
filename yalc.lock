@@ -1,8 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "user-actions-logger": {
-      "signature": "aa55e585c420b9b47b7427f1e3625b87"
-    }
-  }
-}
