@@ -20,6 +20,7 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "strapi-plugin-logz": "file:.yalc/strapi-plugin-logz",
+    "strapi-plugin-ual": "file:.yalc/strapi-plugin-ual",
     "styled-components": "^6.0.0",
     "user-actions-logger": "file:.yalc/user-actions-logger"
   },
