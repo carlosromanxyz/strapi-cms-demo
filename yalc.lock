@@ -1,0 +1,8 @@
+{
+  "version": "v1",
+  "packages": {
+    "strapi-plugin-ual": {
+      "signature": "683cbd12fa0314a8b4284e1e08d91cf1"
+    }
+  }
+}
