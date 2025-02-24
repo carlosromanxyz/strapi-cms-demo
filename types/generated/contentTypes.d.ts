@@ -637,49 +637,6 @@ export interface PluginReviewWorkflowsWorkflowStage
   };
 }
 
-export interface PluginUalUal extends Struct.CollectionTypeSchema {
-  collectionName: 'ual';
-  info: {
-    description: 'The ual collection';
-    displayName: 'UAL';
-    pluralName: 'ual';
-    singularName: 'ual';
-  };
-  options: {
-    draftAndPublish: false;
-    timestamps: true;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: true;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    action: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    data: Schema.Attribute.JSON;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'plugin::ual.ual'> &
-      Schema.Attribute.Private;
-    method: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    statusCode: Schema.Attribute.Integer;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    url: Schema.Attribute.Text;
-    user: Schema.Attribute.Relation<
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
-  };
-}
-
 export interface PluginUploadFile extends Struct.CollectionTypeSchema {
   collectionName: 'files';
   info: {
@@ -958,7 +915,6 @@ declare module '@strapi/strapi' {
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::review-workflows.workflow': PluginReviewWorkflowsWorkflow;
       'plugin::review-workflows.workflow-stage': PluginReviewWorkflowsWorkflowStage;
-      'plugin::ual.ual': PluginUalUal;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
