@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "strapi-plugin-ual": {
-      "signature": "4aa3e051c7d39c8457320441cf3e4c74"
+      "signature": "b8a9c9696b418f085b2d3e537da118dd"
     }
   }
 }
