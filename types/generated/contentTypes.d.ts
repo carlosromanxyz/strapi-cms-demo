@@ -658,7 +658,7 @@ export interface PluginUalUal extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    action: Schema.Attribute.Text;
+    action: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
